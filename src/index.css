@@ -1,0 +1,19 @@
+* {
+	font: 400 14px / 1.2 'Roboto';
+	margin: 0;
+	padding: 0;
+}
+
+html, body, #root, .App {
+	height: 100%;
+}
+
+h1 {
+	font-size: 26px;
+	font-weight: 700;
+	text-align: center;
+}
+
+.start-page {
+	padding: 5%;
+}

@@ -1,0 +1,2 @@
+export const GET_EXERCISE_TYPES = 'GET_EXERCISE_TYPES';
+
