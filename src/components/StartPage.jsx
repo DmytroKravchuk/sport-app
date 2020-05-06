@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux'
+import ExerciseType from "./ExerciseType";
 
 const mapStateToProps = (state) => {
 	return {
@@ -11,9 +12,11 @@ function StartPage({exerciseTypes}) {
 	return (
 		<div className='page start-page'>
 			<h1>CHOOSE EXERCISE!</h1>
-			{exerciseTypes.map(type => {
-				return <div key={type.id}>{type.title}</div>
-			})}
+			<div className='exercise-type-wrapper'>
+				{exerciseTypes.map(type => {
+					return <ExerciseType key={type.id} title={type.title}/>
+				})}
+			</div>
 		</div>
 	)
 }
