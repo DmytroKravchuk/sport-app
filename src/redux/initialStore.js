@@ -1,5 +1,18 @@
 const initialStore = {
-	exerciseTypes: ['100 push ups', '50 pull ups', '300 squats']
+	exerciseTypes: [
+		{
+			title: '100 push ups',
+			id: '1'
+		},
+		{
+			title: '50 pull ups',
+			id: '1'
+		},
+		{
+			title: '300 squats',
+			id: '1'
+		}
+	]
 };
 
 export default initialStore;
