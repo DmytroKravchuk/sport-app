@@ -1,8 +1,11 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
-const ExerciseType = ({title}) => {
+const ExerciseType = ({title, path}) => {
     return (
-        <div className='exercise-type'>{title}</div>
+        <Link to={path} className='exercise-type'>
+            {title}
+        </Link>
     )
 }
 
