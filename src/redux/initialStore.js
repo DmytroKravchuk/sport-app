@@ -6,11 +6,11 @@ const initialStore = {
 		},
 		{
 			title: '50 pull ups',
-			id: '1'
+			id: '2'
 		},
 		{
 			title: '300 squats',
-			id: '1'
+			id: '3'
 		}
 	]
 };
