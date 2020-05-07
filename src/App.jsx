@@ -1,10 +1,9 @@
 import React from 'react';
-import StartPage from './components/StartPage';
 
-function App() {
+function App({children}) {
   return (
     <div className="App">
-        <StartPage/>
+        {children}
     </div>
   );
 }
