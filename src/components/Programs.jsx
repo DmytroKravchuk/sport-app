@@ -5,18 +5,20 @@ import Program from "./Program";
 const Programs = ({programs, typeProgram, currentPath}) => {
     const program = filterProgramsType(programs, typeProgram);
     return (
-        <div className='list-program'>
-            {
-                program[0].list.map(program => {
-                    return <Program
+        <div className='list-program-wrapper'>
+            <div className='list-program'>
+                {
+                    program[0].list.map(program => {
+                        return <Program
                             title={program.title}
                             description={program.description}
                             id={program.id}
                             key={program.id}
                             currentPath={currentPath}
-                    />
-                })
-            }
+                        />
+                    })
+                }
+            </div>
         </div>
     )
 }
@@ -24,6 +26,7 @@ const Programs = ({programs, typeProgram, currentPath}) => {
 function filterProgramsType(programs, type) {
     return programs.filter(item => item.type === type);
 }
+
 const mapStateToProps = (state) => {
     return {
         programs: state.programs

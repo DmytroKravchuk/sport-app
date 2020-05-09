@@ -54,3 +54,33 @@ h1 {
 .exercise-type:hover {
 	background-color: rgba(255, 255, 255, 0.3);
 }
+
+.list-program-wrapper {
+	padding-top: 20px;
+}
+
+.list-program {
+	max-width: 80%;
+	margin: 0 auto;
+	background: #0103119e;
+}
+
+.list-program > a {
+	display: flex;
+	flex-direction: column;
+	padding: 5px 10px;
+	border-bottom: 1px solid #fff;
+	text-decoration: none;
+}
+
+.list-program > a:hover {
+	opacity: .7;
+}
+
+.list-program > a:last-child {
+	border-bottom: none;
+}
+
+.program-description {
+	font-size: 10px;
+}
