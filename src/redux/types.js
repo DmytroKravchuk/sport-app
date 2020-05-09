@@ -1,2 +1,3 @@
 export const GET_EXERCISE_TYPES = 'GET_EXERCISE_TYPES';
+export const GET_PROGRAMS = 'GET_PROGRAMS';
 
