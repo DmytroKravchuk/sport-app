@@ -59,6 +59,28 @@ h1 {
 	padding-top: 20px;
 }
 
+.list-program-wrapper header {
+	position: relative;
+	padding: 10px 0 10px 50px;
+	background: #3d8bd5;
+}
+
+.header-back {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 45px;
+	height: 100%;
+}
+
+.arrow-back {
+	width: 15px;
+	height: auto;
+}
+
 .list-program {
 	max-width: 80%;
 	margin: 0 auto;
@@ -66,6 +88,7 @@ h1 {
 }
 
 .list-program > a {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	padding: 5px 10px;
@@ -81,6 +104,16 @@ h1 {
 	border-bottom: none;
 }
 
+.list-program .arrow-next {
+	width: 15px;
+	height: auto;
+	position: absolute;
+	right: 10px;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
 .program-description {
 	font-size: 10px;
 }
+
