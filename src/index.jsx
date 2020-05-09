@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
-import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import {BrowserRouter} from 'react-router-dom';
 import rootReducer from './redux/reducers/rootReducer';
 import './index.css';
 import App from './App';
 import initialStore from './redux/initialStore';
-import StartPage from './components/StartPage';
+import Routing from "./components/Routing";
 
 const store = createStore(
     rootReducer,
@@ -18,9 +18,7 @@ ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
         <App>
-            <Switch>
-                <Route exact path='/' component={StartPage}/>
-            </Switch>
+            <Routing/>
         </App>
     </BrowserRouter>
   </Provider>,
