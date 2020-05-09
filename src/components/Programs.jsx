@@ -1,12 +1,14 @@
 import React from "react";
 import {connect} from 'react-redux';
 import Program from "./Program";
+import Header from "./Header";
 
 const Programs = ({programs, typeProgram, currentPath}) => {
     const program = filterProgramsType(programs, typeProgram);
     return (
         <div className='list-program-wrapper'>
             <div className='list-program'>
+                <Header path={'/'}/>
                 {
                     program[0].list.map(program => {
                         return <Program
