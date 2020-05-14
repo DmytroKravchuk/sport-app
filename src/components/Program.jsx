@@ -1,9 +1,11 @@
 import React from "react";
 import {Link} from "react-router-dom";
+import {connect} from "react-redux";
+import {setCurrentProgramID} from "../redux/actions/actions";
 
- const Program = ({title, description, id, currentPath}) => {
+ const Program = ({title, description, id, currentPath, setCurrentProgramID}) => {
     return (
-        <Link to={`${currentPath}/${id}`}>
+        <Link to={`${currentPath}/${id}`} onClick={() => setCurrentProgramID(id)}>
             <div className='program-title'>{title}</div>
             <div className='program-description'>{description}</div>
             <svg version="1.1" id="Capa_1" className="arrow-next" x="0px" y="0px"
@@ -20,4 +22,12 @@ import {Link} from "react-router-dom";
     )
 }
 
-export default Program;
+const mapDispatchToProps = (dispatch) => {
+    return {
+        setCurrentProgramID: (currentProgramId) => {
+            dispatch(setCurrentProgramID(currentProgramId))
+        }
+    }
+}
+
+export default connect(null, mapDispatchToProps)(Program);

@@ -26,79 +26,105 @@ const initialStore = {
                 {
                     'title': 'Program 1',
                     'description': 'Less than 5 pushups?',
-                    'id': '1',
-                    'img': ''
+                    'id': 'program1',
+                    'img': '',
+                    'list': [
+                        {
+                            'day': 1,
+                            'approaches': [2, 3, 2, 2, 3]
+                        },
+                        {
+                            'day': 2,
+                            'approaches': [3, 3, 2, 2, 4]
+                        },
+                        {
+                            'day': 3,
+                            'approaches': [4, 4, 3, 3, 5]
+                        },
+                        {
+                            'day': 4,
+                            'approaches': [4, 5, 4, 4, 6]
+                        },
+                        {
+                            'day': 5,
+                            'approaches': [5, 5, 4, 4, 7]
+                        },
+                        {
+                            'day': 6,
+                            'approaches': [5, 6, 4, 4, 7]
+                        }
+                    ]
                 },
                 {
                     'title': 'Program 2',
                     'description': '6-10 pushups?',
-                    'id': '2',
+                    'id': 'program2',
                     'img': ''
                 },
                 {
                     'title': 'Program 3',
                     'description': '11-20 pushups?',
-                    'id': '3',
+                    'id': 'program3',
                     'img': ''
                 },
                 {
                     'title': 'Program 4',
                     'description': '16-20 pushups?',
-                    'id': '4',
+                    'id': 'program4',
                     'img': ''
                 },
                 {
                     'title': 'Program 5',
                     'description': '21-25 pushups?',
-                    'id': '5',
+                    'id': 'program5',
                     'img': ''
                 },
                 {
                     'title': 'Program 6',
                     'description': '26-30 pushups?',
-                    'id': '6',
+                    'id': 'program6',
                     'img': ''
                 },
                 {
                     'title': 'Program 7',
                     'description': '31-35 pushups?',
-                    'id': '7',
+                    'id': 'program7',
                     'img': ''
                 },
                 {
                     'title': 'Program 8',
                     'description': '36-40 pushups?',
-                    'id': '8',
+                    'id': 'program8',
                     'img': ''
                 },
                 {
                     'title': 'Program 9',
                     'description': '41-45 pushups?',
-                    'id': '10',
+                    'id': 'program10',
                     'img': ''
                 },
                 {
                     'title': 'Program 10',
                     'description': '46-50 pushups?',
-                    'id': '11',
+                    'id': 'program11',
                     'img': ''
                 },
                 {
                     'title': 'Program 11',
                     'description': '51-55 pushups?',
-                    'id': '12',
+                    'id': 'program12',
                     'img': ''
                 },
                 {
                     'title': 'Program 12',
                     'description': '56-60 pushups?',
-                    'id': '13',
+                    'id': 'program13',
                     'img': ''
                 },
                 {
                     'title': 'Program 13',
                     'description': 'More than 60 pushups?',
-                    'id': '14',
+                    'id': 'program14',
                     'img': ''
                 }
             ]
@@ -109,13 +135,13 @@ const initialStore = {
                 {
                     'title': 'Program 1',
                     'description': '<4 pullups?',
-                    'id': '1',
+                    'id': 'program1',
                     'img': ''
                 },
                 {
                     'title': 'Program 2',
                     'description': '4-5 pullups?',
-                    'id': '2',
+                    'id': 'program2',
                     'img': ''
                 }
             ]
@@ -126,18 +152,20 @@ const initialStore = {
                 {
                     'title': 'Program 1',
                     'description': '1-20 squats',
-                    'id': '1',
+                    'id': 'program1',
                     'img': ''
                 },
                 {
                     'title': 'Program 2',
                     'description': '21-40 squats',
-                    'id': '2',
+                    'id': 'program2',
                     'img': ''
                 }
             ]
         }
-    ]
+    ],
+    currentExerciseType: '',
+    currentProgramId: ''
 };
 
 export default initialStore;
