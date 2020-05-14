@@ -31,27 +31,33 @@ const initialStore = {
                     'list': [
                         {
                             'day': 1,
-                            'approaches': [2, 3, 2, 2, 3]
+                            'approaches': [2, 3, 2, 2, 3],
+                            'id': 1
                         },
                         {
                             'day': 2,
-                            'approaches': [3, 3, 2, 2, 4]
+                            'approaches': [3, 3, 2, 2, 4],
+                            'id': 2
                         },
                         {
                             'day': 3,
-                            'approaches': [4, 4, 3, 3, 5]
+                            'approaches': [4, 4, 3, 3, 5],
+                            'id': 3
                         },
                         {
                             'day': 4,
-                            'approaches': [4, 5, 4, 4, 6]
+                            'approaches': [4, 5, 4, 4, 6],
+                            'id': 4
                         },
                         {
                             'day': 5,
-                            'approaches': [5, 5, 4, 4, 7]
+                            'approaches': [5, 5, 4, 4, 7],
+                            'id': 5
                         },
                         {
                             'day': 6,
-                            'approaches': [5, 6, 4, 4, 7]
+                            'approaches': [5, 6, 4, 4, 7],
+                            'id': 7
                         }
                     ]
                 },
