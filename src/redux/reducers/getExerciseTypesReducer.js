@@ -8,7 +8,7 @@ const getExerciseTypeReducer = (state = initialState, action) => {
 	switch (action.type) {
 		case GET_EXERCISE_TYPES:
 			return {
-				state,
+				...state,
 				exerciseTypes: [...state.exerciseTypes, action.payload]
 			};
 		default: return state;

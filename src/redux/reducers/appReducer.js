@@ -9,7 +9,7 @@ export const currentExerciseReducer = (state = initialState, action) => {
     switch (action.type) {
         case SET_CURRENT_EXERCISE:
             return {
-                state,
+                ...state,
                 currentExerciseType: action.payload
             }
         default:
@@ -21,7 +21,7 @@ export const currentProgramId = (state = initialState, action) => {
     switch (action.type) {
         case SET_CURRENT_PROGRAM_ID:
             return {
-                state,
+                ...state,
                 currentProgramId: action.payload
             }
         default:

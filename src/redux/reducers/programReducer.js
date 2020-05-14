@@ -8,7 +8,7 @@ function getProgramsReducer(state = initialState, action) {
     switch (action.type) {
         case GET_PROGRAMS:
             return {
-                state,
+                ...state,
                 programs: [...state.programs, action.payload]
             }
         default:
