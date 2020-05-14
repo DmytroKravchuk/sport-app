@@ -1,7 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
 
-const Header = ({path}) => {
+const Header = ({path, text}) => {
     return (
         <header>
             <Link to={path} className='header-back'>
@@ -15,9 +15,8 @@ const Header = ({path}) => {
                         </g>
                     </g>
                 </svg>
-
             </Link>
-            Select program
+            {text}
         </header>
     )
 }

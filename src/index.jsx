@@ -11,7 +11,8 @@ import Routing from "./components/Routing";
 
 const store = createStore(
     rootReducer,
-    initialStore
+    initialStore,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
 ReactDOM.render(

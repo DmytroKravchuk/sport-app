@@ -14,7 +14,12 @@ function StartPage({exerciseTypes}) {
 			<h1>CHOOSE EXERCISE!</h1>
 			<div className='exercise-type-wrapper'>
 				{exerciseTypes.map(type => {
-					return <ExerciseType key={type.id} title={type.title} path={type.path}/>
+					return <ExerciseType
+								key={type.id}
+								title={type.title}
+								path={type.path}
+								exerciseType={type.type}
+					/>
 				})}
 			</div>
 		</div>
