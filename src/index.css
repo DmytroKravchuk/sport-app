@@ -113,7 +113,12 @@ h1 {
 	bottom: 0;
 	margin: auto;
 }
-.program-description {
+.program-description,
+.program-approaches {
+	padding-top: 3px;
 	font-size: 10px;
 }
 
+.program-approaches {
+	word-spacing: 6px;
+}
