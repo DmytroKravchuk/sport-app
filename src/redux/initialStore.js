@@ -171,7 +171,9 @@ const initialStore = {
         }
     ],
     currentExerciseType: '',
-    currentProgramId: ''
+    currentProgramId: '',
+    currentDay: '',
+    currentApproaches: ''
 };
 
 export default initialStore;

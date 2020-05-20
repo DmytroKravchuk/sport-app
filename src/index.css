@@ -55,11 +55,11 @@ h1 {
 	background-color: rgba(255, 255, 255, 0.3);
 }
 
-.list-program-wrapper {
+.App {
 	padding-top: 20px;
 }
 
-.list-program-wrapper header {
+header {
 	position: relative;
 	padding: 10px 0 10px 50px;
 	background: #3d8bd5;
@@ -75,23 +75,36 @@ h1 {
 	width: 45px;
 	height: 100%;
 }
+.no-back-header {
+	padding-left: 10px;
+}
+
+.no-back-header a {
+	display: none;
+}
 
 .arrow-back {
 	width: 15px;
 	height: auto;
 }
 
-.list-program {
+.list-program,
+.content{
 	max-width: 80%;
 	margin: 0 auto;
 	background: #0103119e;
+}
+
+.program-day-title {
+	display: flex;
+	justify-content: space-between;
 }
 
 .list-program > a {
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	padding: 5px 10px;
+	padding: 5px 40px 5px 10px;
 	border-bottom: 1px solid #fff;
 	text-decoration: none;
 }
@@ -121,4 +134,34 @@ h1 {
 
 .program-approaches {
 	word-spacing: 6px;
+}
+
+.play-wrapper {
+	display: flex;
+}
+
+.play-wrapper {
+	display: flex;
+	justify-content: center;
+	padding: 30px 0;
+}
+
+.play {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	background: #000;
+	border-radius: 50%;
+	border: 4px solid;
+	cursor: pointer;
+}
+
+.play:after {
+	content: '';
+	position: absolute;
+	left: calc(50% + 35px);
+	top: 50%;
+	transform: translate(-50%, -50%);
+	border: 50px solid rgba(0, 0, 0, 0);
+	border-left: 70px solid #fff;
 }

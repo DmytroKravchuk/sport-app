@@ -3,15 +3,23 @@ import Header from "./Header";
 import ListBox from "./ListBox";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
+import {setCurrentApproaches, setCurrentDay} from "../redux/actions/actions";
 
-const ProgramsDays = ({path, list = [], pathToPlay}) => {
+const ProgramsDays = ({path, list = [], pathToPlay, setCurrentDay, setCurrentApproaches}) => {
     return (
         <ListBox>
             <Header path={path} text='Program'/>
             {
                 list.map(item => {
-                    return <Link to={pathToPlay} key={item.id}>
-                        <div className='program-day'>{`Day ${item.day}`}</div>
+                    const sum = item.approaches.reduce((prev, current) => prev + current);
+                    return <Link to={pathToPlay} key={item.id} onClick={() => {
+                        setCurrentDay(item.day);
+                        setCurrentApproaches(item.approaches);
+                    }}>
+                        <div className='program-day-title'>
+                            <span>{`Day ${item.day}`}</span>
+                            <span>{`Total: ${sum}`}</span>
+                        </div>
                         <div className='program-approaches'>{item.approaches.join(' ')}</div>
                         <svg version="1.1" id="Capa_1" className="arrow-next" x="0px" y="0px"
                              fill="white" viewBox="0 0 512.002 512.002">
@@ -46,4 +54,11 @@ const mapStateToProps = (state) => {
         list: filterProgram(state)
     }
 };
-export default connect(mapStateToProps, null)(ProgramsDays);
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        setCurrentDay: (day) => dispatch(setCurrentDay(day)),
+        setCurrentApproaches: (day) => dispatch(setCurrentApproaches(day))
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(ProgramsDays);
